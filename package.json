@@ -1,6 +1,6 @@
 {
   "name": "morpher_ru",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "simple interface to morpher.ru service",
   "main": "./src/morpher",
   "directories": {
