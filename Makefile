@@ -3,8 +3,8 @@ PACKAGE = morpher_ru
 all: clean test build
 
 build: 
+	echo "Compiling ./src/*.coffee"
 	coffee -c ./src/*.coffee
-	$(wildcard  lib/*.js)
 	
 test:
 	coffee -c ./test/*.coffee
