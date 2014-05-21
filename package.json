@@ -1,0 +1,24 @@
+{
+  "name": "morpher_ru",
+  "version": "0.0.0",
+  "description": "simple interface to morpher.ru service",
+  "main": "./src/morpher",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/teopetuk/morpher_ru.git"
+  },
+  "keywords": [
+    "morpher.ru"
+  ],
+  "author": "TeopeTuK",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/teopetuk/morpher_ru/issues"
+  }
+}
