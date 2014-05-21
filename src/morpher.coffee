@@ -27,12 +27,12 @@ casePaths = [
 
 module.exports =
 
-###
-    returns array of cases
-###
+    ###
+        returns array of cases
+    ###
     word: (word, callback)->
               [morphedXML,rq,morphed,data] = [null, null, null, null]
-              async.series steps =
+              async.series  steps =
                                "http": (callback)->
                                            rq = http.get urlMorpher + word,
                                                          (res)->
@@ -57,14 +57,15 @@ module.exports =
                                                     caseValues[0]
                                             data.splice 0, 0, word
                                             callback()
-                           , (error, result)->
+                            ,(error, result)->
                                  callback error, data
 
-###
+
+    ###
     returns something like:
         "word":["word_case1","word_case2",...]
         ...
-###
+    ###
     words: (words, callback)->
                self = @
                morphed = {}
