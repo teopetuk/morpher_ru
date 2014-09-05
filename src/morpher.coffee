@@ -36,11 +36,17 @@ module.exports =
                                "http": (callback)->
                                            rq = http.get urlMorpher + word,
                                                          (res)->
+                                                             res.setEncoding('utf8');
+                                                             console.log "Got response: " + res.statusCode
                                                              res.on 'data',
                                                                     (data)->
-                                                                        #console.log data.toString()
-                                                                        morphedXML = data.toString()
+                                                                        console.log data.toString()
+                                                                        morphedXML += data.toString()
+
+                                                             res.on 'end',
+                                                                    ->
                                                                         callback()
+
                                            rq.on 'error', (e) -> callback e
 
                                "xml2js": (callback)->
