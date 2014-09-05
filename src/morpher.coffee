@@ -31,16 +31,16 @@ module.exports =
         returns array of cases
     ###
     word: (word, callback)->
-              [morphedXML,rq,morphed,data] = [null, null, null, null]
+              [morphedXML,rq,morphed,data] = ['', null, null, null]
               async.series  steps =
                                "http": (callback)->
                                            rq = http.get urlMorpher + word,
                                                          (res)->
                                                              res.setEncoding('utf8');
-                                                             console.log "Got response: " + res.statusCode
+#                                                             console.log "Got response: " + res.statusCode
                                                              res.on 'data',
                                                                     (data)->
-                                                                        console.log data.toString()
+#                                                                        console.log data.toString()
                                                                         morphedXML += data.toString()
 
                                                              res.on 'end',
